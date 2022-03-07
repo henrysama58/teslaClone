@@ -1,23 +1,23 @@
 import React from 'react';
 import styled from "styled-components"
 
-const Section = () => {
+const Section = ({ title, description, leftBtnTxt, rightBtnTxt, backgroundImg }) => {
     return (
-        <Wrap>
+        <Wrap backgroundImg={backgroundImg}>
             <ItemText>
-                <h1>Model 3</h1>
-                <p>Order Online for <span>Touchless Delivery</span></p>
+                <h1>{title}</h1>
+                <p>{description}</p>
             </ItemText>
             <Buttons>
                 <ButtonGroup>
                     <LeftButton>
-                        CUSTOM ORDER
+                        {leftBtnTxt}
                     </LeftButton>
                     <RightButton>
-                        EXISTING INVENTORY
+                        {rightBtnTxt}
                     </RightButton>
                 </ButtonGroup>
-                <DownArrow src="assets/images/down-arrow.svg" />
+                <DownArrow src="/assets/images/down-arrow.svg" />
             </Buttons>
         </Wrap>
     );
@@ -28,7 +28,7 @@ export default Section;
 const Wrap = styled.div`
     width: 100vw;
     height: 100vh;
-    background-image: url('assets/images/model-3.jpg');
+    background-image: ${props => `url("/assets/images/${props.backgroundImg}")` };
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -41,10 +41,19 @@ const Wrap = styled.div`
 const ItemText = styled.div`
     padding-top: 15vh;
     text-align: center;
+
+    h1 {
+        font-size: 40px;
+        margin-bottom: 8px;
+    }
 `
 const ButtonGroup = styled.div`
     display: flex;
-    margin-bottom: 32px;
+    margin-bottom: 30px;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
 `
 
 const LeftButton = styled.div`
@@ -59,7 +68,7 @@ const LeftButton = styled.div`
     opacity: 0.85;
     font-size: 12px;
     cursor: pointer;
-    margin-right: 8px;
+    margin: 8px;
 `
 
 const RightButton = styled(LeftButton)`
