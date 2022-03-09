@@ -52,6 +52,12 @@ const Landing = () => {
                 leftBtnTxt="ORDER NOW"
                 rightBtnTxt="LEARN MORE"
             />
+
+            <Section
+                title="Accessories"
+                backgroundImg="accessories.jpg" 
+                leftBtnTxt="SHOP NOW"
+            />
         </Container>
     );
 }
