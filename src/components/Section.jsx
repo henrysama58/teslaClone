@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from "styled-components"
 import Fade from 'react-reveal/Fade'
+import downArrow from '../assets/down-arrow.svg'
 
 const Section = ({ title, description, leftBtnTxt, rightBtnTxt, backgroundImg }) => {
     return (
@@ -30,7 +31,7 @@ const Section = ({ title, description, leftBtnTxt, rightBtnTxt, backgroundImg })
                     }
                 </ButtonGroup>
                 <Fade top>
-                    <DownArrow src="/assets/images/down-arrow.svg" />
+                    <DownArrow src={downArrow} />
                 </Fade>
             </Buttons>
         </Wrap>
@@ -42,7 +43,7 @@ export default Section;
 const Wrap = styled.div`
     width: 100vw;
     height: 100vh;
-    background-image: ${props => `url("/assets/images/${props.backgroundImg}")` };
+    background-image: ${props => `url("${props.backgroundImg}")` };
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

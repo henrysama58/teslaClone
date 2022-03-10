@@ -1,6 +1,13 @@
 import React from 'react';
 import styled from "styled-components"
 import Section from './Section';
+import models from '../assets/model-s.jpg'
+import model3 from '../assets/model-3.jpg'
+import modelx from '../assets/model-x.jpg'
+import modely from '../assets/model-y.jpg'
+import solarPanel from '../assets/solar-panel.jpg'
+import solarRoof from '../assets/solar-roof.jpg'
+import accessories from '../assets/accessories.jpg'
 
 const Landing = () => {
     return (
@@ -8,7 +15,7 @@ const Landing = () => {
             <Section
                 title="Model 3"
                 description="Order Online for Touchless Delivery"
-                backgroundImg="model-3.jpg" 
+                backgroundImg={model3}
                 leftBtnTxt="CUSTOM ORDER"
                 rightBtnTxt="EXISTING INVENTORY"
             />
@@ -16,7 +23,7 @@ const Landing = () => {
             <Section
                 title="Model Y"
                 description="Order Online for Touchless Delivery"
-                backgroundImg="model-y.jpg" 
+                backgroundImg={modely} 
                 leftBtnTxt="CUSTOM ORDER"
                 rightBtnTxt="EXISTING INVENTORY"
             />
@@ -24,7 +31,7 @@ const Landing = () => {
             <Section
                 title="Model S"
                 description="Order Online for Touchless Delivery"
-                backgroundImg="model-s.jpg" 
+                backgroundImg={models}
                 leftBtnTxt="CUSTOM ORDER"
                 rightBtnTxt="EXISTING INVENTORY"
             />
@@ -32,7 +39,7 @@ const Landing = () => {
             <Section
                 title="Model X"
                 description="Order Online for Touchless Delivery"
-                backgroundImg="model-x.jpg" 
+                backgroundImg={modelx} 
                 leftBtnTxt="CUSTOM ORDER"
                 rightBtnTxt="EXISTING INVENTORY"
             />
@@ -40,7 +47,7 @@ const Landing = () => {
             <Section
                 title="Solar Panels"
                 description="Lowest Cost Solar Panels in America"
-                backgroundImg="solar-panel.jpg" 
+                backgroundImg={solarPanel} 
                 leftBtnTxt="ORDER NOW"
                 rightBtnTxt="LEARN MORE"
             />
@@ -48,14 +55,14 @@ const Landing = () => {
             <Section
                 title="Solar Roof"
                 description="Produce Clean Energy From Your Roof"
-                backgroundImg="solar-roof.jpg" 
+                backgroundImg={solarRoof}
                 leftBtnTxt="ORDER NOW"
                 rightBtnTxt="LEARN MORE"
             />
 
             <Section
                 title="Accessories"
-                backgroundImg="accessories.jpg" 
+                backgroundImg={accessories} 
                 leftBtnTxt="SHOP NOW"
             />
         </Container>
